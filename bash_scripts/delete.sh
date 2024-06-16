@@ -1,4 +1,3 @@
-
 source /Users/sagarpoudel/airflow/bash_scripts/credentials.sh
 
 directory=$DUMP_DIR

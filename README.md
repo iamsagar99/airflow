@@ -12,10 +12,10 @@ Next, we determine the size of the database that needs to be backed up.
 3. Compare Free Disk Space with Database Size
 We then compare the available free space on the disk with the size of the database.
 
-If freeSizeOfDisk > sizeOfDb:
-    Proceed with the database dump.
-    and on success send email
-Else:
+- If freeSizeOfDisk > sizeOfDb:
+     - Proceed with the database dump.
+     - and on success send email.
+- Else:
     Send an alert to the administrator.
     Halt the backup process.
 

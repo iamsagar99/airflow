@@ -95,7 +95,7 @@ dag = DAG(
     'backupMysql',
     default_args=default_args,
     description='A DAG to backup MySQL database and send email notification',
-    schedule_interval='*/2 * * * *',  # Cron ,
+    schedule_interval='0 0 * * *',  # Cron ,
 )
 
 check_free_space = BashOperator(

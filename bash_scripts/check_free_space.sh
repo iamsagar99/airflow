@@ -1,13 +1,16 @@
 
-
+#fetching credentials from another file
 source /Users/sagarpoudel/airflow/bash_scripts/credentials.sh
 
+#fetching the size of the database
 DB_SIZE=$(mysql -u $DB_USER -p$DB_PASS -e "SELECT ROUND(SUM(data_length + index_length) / 1024 / 1024 / 1024, 8) FROM information_schema.tables WHERE table_schema = '$DB_NAME';" -s -N)
 
+#df doesn't directly give size but it provides block numbers that are free. each block is of 512 byte
 available_blocks=$(df | awk '$NF=="/System/Volumes/Data" {print $4}')
 
 available_bytes=$((available_blocks * 512))
 
+#size of the free space in disk
 FREE_SPACE=$(echo "scale=2; $available_bytes / (1024^3)" | bc)
 
 echo "Helllo from free space check"

@@ -7,11 +7,6 @@ output.log
 *.cfg
 .DS_Store
 
-# Example of ignoring all .log files except output.log
 *.log
 
-
-# Example of ignoring other common unwanted files or directories
-# node_modules/
-# *.pyc
 

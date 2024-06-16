@@ -1,0 +1,1 @@
+airflow standalone > output.log 2>&1

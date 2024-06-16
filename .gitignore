@@ -1,0 +1,4 @@
+logs
+standalone_admin_password.txt
+airflow_env
+bash_scripts/credentials.sh

@@ -1,4 +1,7 @@
 logs
 standalone_admin_password.txt
+airflow.cfg
 airflow_env
 bash_scripts/credentials.sh
+output.log
+
